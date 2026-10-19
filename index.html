@@ -1,7 +1,17 @@
 <!DOCTYPE html>
-<html>
 <head>
   <title>My Online Portfolio</title>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .chart-container{
+    width:90%;
+    max-width:800px;
+    margin:30px auto;
+  }
+  </style>
+
 </head>
 <body>
   <h1 style="text-align:center;">My Online Portfolio</h1>
@@ -9,5 +19,47 @@
   <div style="text-align:center;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/LeBron_James_-_51959723161.jpg" alt="LeBron James">
   </div>
+    <div class = "chart-container">
+    <canvas id =chart></canvas>
+    <script>
+      const ctx=document.getElementById("chart");
+      new Chart(ctx,{
+        type: "line",
+        data: {
+          labels:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          datasets:[{
+            label: "Coffee Spending",
+            data:[6.00,12.00,12.00,18.00,18.00],
+
+            borderColor: "#FF0145",
+            backgroundColor:"#E3DCDC",
+            borderWidth:3,
+            fill:true,
+            tension: 0.35,
+            pointRadius:4,
+            pointBackgroundColor: "#FF0145"
+          }]
+        },
+
+        options: {
+          responsive:true,
+          maintainAspectRatio:true,
+
+          plugins: {
+            legend: {
+              display:true
+            }
+          },
+          scales: {
+            y:{
+              beginAtZero:true
+            }
+          }
+        }
+      });
+
+
+    </script>
+    </div>
 </body>
 </html>
