@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <head>
-  <title>My Online Portfolio</title>
-  <meta charset = "UTF-8">
-  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    .chart-container{
-    width:90%;
-    max-width:800px;
-    margin:30px auto;
+<title>Abraham's Portfolio</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  body {
+    background: lightgray;
+    font-family: Arial;
+    max-width: 650px;
+    margin: 20px auto;
   }
-  </style>
-
+  h1 { color: purple; }
+  img { width: 250px; }
+</style>
 </head>
 <body>
-  <h1 style="text-align:center;">My Online Portfolio</h1>
-  <p style="text-align:center;">I'm Abraham Olatunde and here is my class demo.</p>
-  <div style="text-align:center;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/LeBron_James_-_51959723161.jpg" alt="LeBron James">
-  </div>
-    <div class = "chart-container">
-    <canvas id =chart></canvas>
-    <script>
-      const ctx=document.getElementById("chart");
-      new Chart(ctx,{
-        type: "line",
-        data: {
-          labels:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          datasets:[{
-            label: "Coffee Spending",
-            data:[6.00,12.00,12.00,18.00,18.00],
 
-            borderColor: "#FF0145",
-            backgroundColor:"#E3DCDC",
-            borderWidth:3,
-            fill:true,
-            tension: 0.35,
-            pointRadius:4,
-            pointBackgroundColor: "#FF0145"
-          }]
-        },
+<h1>Abraham Olatunde</h1>
+<p>This is my DIDA 345 portfolio. I like basketball.</p>
 
-        options: {
-          responsive:true,
-          maintainAspectRatio:true,
+<img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500"
+alt="Basketball court">
+<img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=500"
+alt="Basketball game">
 
-          plugins: {
-            legend: {
-              display:true
-            }
-          },
-          scales: {
-            y:{
-              beginAtZero:true
-            }
-          }
-        }
-      });
+<h2>Points Per Game</h2>
+<p>These numbers are made up.</p>
+<canvas id="points"></canvas>
 
+<h2>Practice Hours</h2>
+<p>These numbers are also made up.</p>
+<canvas id="practice"></canvas>
 
-    </script>
-    </div>
+<h2>Design Choices</h2>
+<p>I used a light gray background so the page is easy to read.
+I chose purple because it reminds me of the Lakers.
+The photos show my interest in basketball. I put the charts
+below the photos to keep everything in a simple order.</p>
+
+<script>
+new Chart(document.getElementById("points"), {
+  type: "line",
+  data: {
+    labels: ["Game 1", "Game 2", "Game 3"],
+    datasets: [{
+      label: "Points",
+      data: [20, 28, 24],
+      borderColor: "purple"
+    }]
+  }
+});
+
+new Chart(document.getElementById("practice"), {
+  type: "bar",
+  data: {
+    labels: ["Shooting", "Dribbling", "Defense"],
+    datasets: [{
+      label: "Hours",
+      data: [5, 3, 4],
+      backgroundColor: "orange"
+    }]
+  },
+  options: {
+    scales: { y: { beginAtZero: true } }
+  }
+});
+</script>
+
 </body>
 </html>
