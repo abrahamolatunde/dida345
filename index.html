@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<head>
+<title>Abraham's Portfolio</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  body {
+    background: lightgray;
+    font-family: Arial;
+    max-width: 650px;
+    margin: 20px auto;
+  }
+  h1 { color: purple; }
+  img { width: 250px; }
+</style>
+</head>
+<body>
 
+<h1>Abraham Olatunde</h1>
+<p>This is my DIDA 345 portfolio. I like basketball.</p>
+
+<img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500"
+alt="Basketball court">
+<img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=500"
+alt="Basketball game">
+
+<h2>Points Per Game</h2>
+<p>These numbers are made up.</p>
+<canvas id="points"></canvas>
+
+<h2>Practice Hours</h2>
+<p>These numbers are also made up.</p>
+<canvas id="practice"></canvas>
+
+<h2>Design Choices</h2>
+<p>I used a light gray background so the page is easy to read.
+I chose purple because it reminds me of the Lakers.
+The photos show my interest in basketball. I put the charts
+below the photos to keep everything in a simple order.</p>
+
+<script>
+new Chart(document.getElementById("points"), {
+  type: "line",
+  data: {
+    labels: ["Game 1", "Game 2", "Game 3"],
+    datasets: [{
+      label: "Points",
+      data: [20, 28, 24],
+      borderColor: "purple"
+    }]
+  }
+});
+
+new Chart(document.getElementById("practice"), {
+  type: "bar",
+  data: {
+    labels: ["Shooting", "Dribbling", "Defense"],
+    datasets: [{
+      label: "Hours",
+      data: [5, 3, 4],
+      backgroundColor: "orange"
+    }]
+  },
+  options: {
+    scales: { y: { beginAtZero: true } }
+  }
+});
+</script>
+
+</body>
+</html>
