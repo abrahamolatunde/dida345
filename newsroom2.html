@@ -1,1 +1,275 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Rise of Prediction Markets</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+  body {
+    background: lightgray;
+    font-family: Arial;
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 15px;
+    line-height: 1.7;
+  }
+
+  header {
+    background: #243b53;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .article {
+    background: white;
+    padding: 25px;
+  }
+
+  h1 {
+    color: #243b53;
+    font-size: 34px;
+  }
+
+  h2 {
+    color: #243b53;
+    margin-top: 35px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    color: #087c83;
+  }
+
+  .visual {
+    background: #eef3f7;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: center;
+  }
+
+  .contract {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #243b53;
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  canvas {
+    max-width: 100%;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .article {
+      padding: 15px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  DIDA 345 | NEWSROOM 2
+</header>
+
+<div class="article">
+
+<h1>The Rise of Prediction Markets:</h1>
+
+<p>
+The term “doom scrolling” has become common use in our increasingly online world. Not only can you follow current events or the score of your favorite team's game but you can put money on what you believe the outcomes of these events will be. Prediction markets are making it possible to turn these real world events into gambling opportunities.
+</p>
+
+<p>
+Kalshi and Polymarket are two of the more popular platforms that have helped bring prediction markets to the mainstream. A once innovative concept has exploded into a growing industry with a large user base. This past year has been particularly successful in terms of growth as the types of events to trade have expanded and diversified leading to increased trading activity.
+</p>
+
+<p>
+According to a September 2026 analysis conducted by <a href="https://www.pewresearch.org/short-reads/2026/09/23/prediction-markets-trading-volume-doubled-between-may-and-july-largely-driven-by-sports/" target="_blank">Pew Research Center</a>, Kalshi and Polymarket have seen an increase of combined monthly trading volume  from approximately $26 billion in May 2026 to $53 billion in July of 2026. In just two months, two of the many prediction markets doubled the amount of  trading volume. The popularity of prediction markets is undeniable but have we evaluated the potential risks and consequences of this technology properly?
+</p>
+
+<h2>How Prediction Markets Work?</h2>
+
+<p>
+Prediction Markets allow their users to buy and sell contracts based on outcomes of an event. The majority of these contrasts have a simple yes or no structure in which a user may purchase a contract stating that the Federal Reserve will raise interest rates at its next meeting. In the event that the Federal Reserve does raise interest rates, the user will be paid out, if not they lose the amount they spent purchasing the contract.
+</p>
+
+<p>
+The price of the contracts are determined based on the markets perceived probability of an event occurring. For instance, a contract with a price of $0.60 indicates a 60% probability that outcome occurs. Users can purchase contracts at different prices as well as sell them before the event has concluded, allowing a user to profit from shifts of market expectations.
+</p>
+
+<div class="visual">
+  <div class="contract">
+    <span>$0.60</span>
+    <span>60%</span>
+  </div>
+</div>
+
+<p>
+Kalshi and Polymarket both offer event based contracts but they operate under different regulatory structures. Kalshi is registered with the Commodity Futures Trading Commission, which is the federal agency responsible for overseeing certain derivatives markets. On the other hand, Polymarket operates an international platform as well as a separate US platform which is subject to regulation.
+</p>
+
+<p>
+<a href="https://www.everycrsreport.com/files/2026-08-17_R49266_9f0836e3bbd42cc4abdf1cf4a29f9b3442068efb.html" target="_blank">The Congressional Research Service</a> describes these products as “event contracts”, distinguishing them from traditional investments like Stocks and Bonds. The value of the contracts is tied to an event occurring rather than financial performance of a firm.
+</p>
+
+<h2>Growing Market:</h2>
+
+<p>
+The growth of prediction markets is further proof that it is an industry here to stay barring any further legislation and/or regulations put against them. <a href="https://www.pewresearch.org/short-reads/2026/09/23/prediction-markets-trading-volume-doubled-between-may-and-july-largely-driven-by-sports/" target="_blank">Pew Research Center</a> analyzed data showing a combined monthly trading volume on Kalshi and Polymarket was less than $1 billion in September 2024. This figure grew up to an approximate $4.5 billion in September 2025 and less than one year later in July of 2026 it had exploded to nearly $53 billion.
+</p>
+
+<div class="visual">
+  <canvas id="growth"></canvas>
+</div>
+
+<p>
+However, this increase in trading volume has not been consistent amongst every category. In 2024, political events accounted for a large portion of overall trading activity. This activity was particularly due to the United States Presidential election. At the conclusion of the election and during this period of substantial growth, the market has shifted toward sports. Pew Research Center had found sports had become the top category on both Kalshi and Polymarket by July 2026.
+</p>
+
+<p>
+Throughout the duration of June and July 2026, trading volume on sports exceeded $58 billion on Kalshi and nearly $22 billion on Polymarket.  This was no coincidence as this was during the FIFA World Cup, demonstrating how major events, in this case sporting events, have the ability to generate significant trading volume and activity on these platforms.
+</p>
+
+<p>
+This shift towards sports is important because it shows prediction markets are no longer primarily associated with real world events in weather, government, politics, etc. They are now competing with platforms such as Fanduel and DraftKings for users. Users who once relied on sports books to place bets on their favorite team now have an alternative in prediction markets.
+</p>
+
+<p>
+It is important to fully understand what trading volume actually measures. The analysis done by Pew uses national trading volume, which counts contracts at their full $1 payout value rather than the price a trader paid. Furthermore, a contract can also change hands multiple times. Therefore, the $53 billion dollar figure stated as the trading volume does not mean $53 billion dollars was deposited or was lost. The figure measures the total scale of trading activity across the platform.
+</p>
+
+<h2>More Than Harmless Gambling:</h2>
+
+<p>
+Despite the similarities between sports books and prediction markets there is a key difference when it comes to prediction markets. Prediction markets have the potential to provide insight on expectations of future events occurring.
+</p>
+
+<p>
+Due to contracts having the ability to change prices as users buy and sell, prediction markets can offer a continuously updated estimate of how likely an event will occur based on the expectations of people in the market. Supporters of prediction markets argue that this creates a system incentivizing people with knowledge or expertise on a particular event to make accurate predictions.
+</p>
+
+<p>
+<a href="https://www.nber.org/papers/w34702" target="_blank">The National Bureau of Economic Research</a> published in January 2026 findings of Kalshi's ability to measure expectations about the economy. The researchers found that prediction markets can provide valuable and frequently updated information about economic expectations. Unlike the traditional survey or poll, these markets give consistently updated information on the market's expectations.
+</p>
+
+<p>
+For example, contracts could be bought by traders about inflation, unemployment, or the upcoming interest rate decision by the Federal Reserve. As time passes and more reports are released about these events that have still yet to occur, prices can shift as expectations have changed with these new reports. This is useful for economists and policymakers as they can attempt to understand how markets are responding to economic developments.
+</p>
+
+<p>
+However, the market prices should not be treated automatically as accurate predictions. These prices reflect exclusively the expectations of participating traders, not of the whole population. The accuracy of a prediction can also vary greatly depending on the type of event and the amount of available information on an event.
+</p>
+
+<p>
+Prediction markets fall in a strange place in between gambling platforms, forecasting tools, and financial markets. One reason they have expanded their interest beyond just traders is due to their ability to produce useful information about expectations.
+</p>
+
+<h2>The Regulatory Debate:</h2>
+
+<p>
+With the growth of prediction markets comes the growth of concern over regulation. The central debate is not should it be legal rather whether the event contracts should be treated as financial products or a form of gambling.
+</p>
+
+<p>
+Kalshi is registered with the Commodities Futures Trading Commission (CFTC) which allows it to operate as a federally regulated derivatives exchange (financial product). However, with the expansion of sports related contracts, there has been growing disagreements. State Gambling regulators argue that these products resemble sports betting and should be subject to state gambling laws.
+</p>
+
+<p>
+The Congressional Research Service stated in an August 2026 report that the rapid growth of sporting event contracts has created conflicts between the operators of prediction markets and state regulators. The report also discussed concerns that these platforms may offer products similar to traditional sports betting while operating under a different regulatory framework.
+</p>
+
+<p>
+Another concern is the possibilities of insider trading. Since users can trade on nearly any event the possibility of insider trading increases. People with knowledge or access to information that has yet to be made public can take advantage of this and make an unfair profit.
+</p>
+
+<p>
+In February 2026 two enforcement cases led to the <a href="https://www.cftc.gov/PressRoom/PressReleases/9185-26" target="_blank">CFTC issuing an advisory</a>. In one case, a political candidate placed trades relating to themself and in the other case a youtube channel made trades regarding its own videos. This was especially wrong as they used knowledge of content they had not released. Both cases resulted in fines and trading suspension.
+</p>
+
+<p>
+These incidents illustrate the dangers and challenges of regulating a market with what seems to be an endless amount of tradeable contracts of real world events. The ability to prevent users from insider trading is difficult and is increasingly difficult when the people profiting are people connected to politics.
+</p>
+
+<h2>What’s Next?</h2>
+
+<p>
+Predictions markets have grown into multi billion dollar companies. Their vast trading opportunities that include sports, economies, and politics suggest that they have established themselves as part of the digital economy.
+</p>
+
+<p>
+Simultaneously, their rapid growth has generated questions of concern that regulators and policymakers are still trying to answer. The distinction between financial forecasting and gambling is becoming even more unclear as the variety of events that are tradable grow.
+</p>
+
+<p>
+Whether prediction markets become recognized forecasting tools, just another form of online gambling, or a combination of the both is still unclear. However it is undeniable that people are more and more willing to put money behind their expectations of future outcomes.
+</p>
+
+<h2>Sources:</h2>
+
+<p>
+<a href="https://www.cftc.gov/PressRoom/PressReleases/9185-26" target="_blank">https://www.cftc.gov/PressRoom/PressReleases/9185-26</a>
+</p>
+
+<p>
+<a href="https://www.nber.org/papers/w34702" target="_blank">https://www.nber.org/papers/w34702</a>
+</p>
+
+<p>
+<a href="https://www.everycrsreport.com/files/2026-08-17_R49266_9f0836e3bbd42cc4abdf1cf4a29f9b3442068efb.html" target="_blank">https://www.everycrsreport.com/files/2026-08-17_R49266_9f0836e3bbd42cc4abdf1cf4a29f9b3442068efb.html</a>
+</p>
+
+<p>
+<a href="https://www.pewresearch.org/short-reads/2026/09/23/prediction-markets-trading-volume-doubled-between-may-and-july-largely-driven-by-sports/" target="_blank">https://www.pewresearch.org/short-reads/2026/09/23/prediction-markets-trading-volume-doubled-between-may-and-july-largely-driven-by-sports/</a>
+</p>
+
+</div>
+
+<footer>
+DIDA 345
+</footer>
+
+<script>
+new Chart(document.getElementById("growth"), {
+  type: "bar",
+  data: {
+    labels: [
+      "September 2024",
+      "September 2025",
+      "July 2026"
+    ],
+    datasets: [{
+      label: "Combined monthly trading volume ($ billion)",
+      data: [0.9, 4.5, 53],
+      backgroundColor: "#243b53"
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+</script>
+
+</body>
+</html>
